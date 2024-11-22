@@ -14,7 +14,7 @@ export default function Header() {
       <CustomContainer>
         <div className="flex items-center justify-between gap-8">
           {/* logo */}
-          <div className="w-40">
+          <Link href="/" className="w-40">
             <CustomImage
               src={logo}
               alt="logo"
@@ -22,7 +22,7 @@ export default function Header() {
               height="80"
               className="w-full"
             />
-          </div>
+          </Link>
 
           {/* search */}
           <div className="hidden tab:block w-full max-w-[680px]">
