@@ -24,13 +24,13 @@ export const CustomImage = ({
   return (
     <div className="relative w-auto h-auto">
       {isLoading && (
-        <SkeletonTheme baseColor="#F0F1F1" highlightColor="#2B2740">
+        <SkeletonTheme baseColor="#F0F1F1" highlightColor="#D3D3D3">
           <Skeleton
             height="100%"
             width="100%"
             containerClassName="absolute inset-0"
             baseColor="#F0F1F1"
-            highlightColor="#2B2740"
+            highlightColor="#D3D3D3"
           />
         </SkeletonTheme>
       )}

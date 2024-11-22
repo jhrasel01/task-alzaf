@@ -9,9 +9,9 @@ export default function Banner() {
       <BannerImg />
 
       {/* content */}
-      <div className="absolute top-0 left-0 w-full h-full z-10">
+      <div className="absolute top-0 left-0 w-full h-full">
         <CustomContainer>
-          <div className="bg-white w-[230px]">
+          <div className="bg-white w-[230px] z-10 relative">
             <Category />
           </div>
         </CustomContainer>
