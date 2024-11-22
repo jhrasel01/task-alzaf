@@ -65,7 +65,7 @@ export const CustomSelect = ({
               <button
                 key={option.value}
                 onClick={() => handleOptionClick(option)}
-                className="w-full text-left p-3 hover:bg-gray-200 focus:outline-none"
+                className="w-full text-left py-2 px-3 hover:bg-gray-200 focus:outline-none"
               >
                 {option.label}
               </button>
