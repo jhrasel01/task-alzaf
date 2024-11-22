@@ -56,7 +56,7 @@ export const Category = () => {
               >
                 <Link
                   href={subcategory.link} // Use the link for subcategories
-                  className="flex items-center gap-2 px-3 py-1"
+                  className="flex items-center gap-2 px-3 py-1 hover:text-custom-orang"
                 >
                   {subcategory.title}
                   {arrowIcon(
@@ -106,7 +106,7 @@ export const Category = () => {
           >
             <Link
               href={category.link} // Use the link for categories
-              className="flex items-center gap-2 px-3 py-1"
+              className="flex items-center gap-2 px-3 py-1 hover:text-custom-orang"
             >
               {category.title}
               {arrowIcon(category.childrens && category.childrens.length > 0)}
