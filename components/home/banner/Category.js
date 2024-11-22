@@ -2,6 +2,7 @@
 
 import useCustomSWR from "@/components/hooks/useCustomSWR";
 import { CustomLoading } from "@/components/UI";
+import Link from "next/link";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -53,14 +54,17 @@ export const Category = () => {
                 onMouseEnter={() => handleMouseEnter(nextLevel, subcategory.id)}
                 onMouseLeave={() => handleMouseLeave(nextLevel)}
               >
-                <a className="flex items-center gap-2 px-3 py-1">
+                <Link
+                  href={subcategory.link} // Use the link for subcategories
+                  className="flex items-center gap-2 px-3 py-1"
+                >
                   {subcategory.title}
                   {arrowIcon(
                     subcategory.childrens && subcategory.childrens.length > 0
                   )}
-                </a>
+                </Link>
 
-                {/* show sub sub category */}
+                {/* Show sub-sub category */}
                 {active[nextLevel] === subcategory.id &&
                   subcategory.childrens &&
                   subcategory.childrens.length > 0 &&
@@ -100,10 +104,13 @@ export const Category = () => {
             onMouseEnter={() => handleMouseEnter("category", category.id)}
             onMouseLeave={() => handleMouseLeave("category")}
           >
-            <a className="flex items-center gap-2 px-3 py-1">
+            <Link
+              href={category.link} // Use the link for categories
+              className="flex items-center gap-2 px-3 py-1"
+            >
               {category.title}
               {arrowIcon(category.childrens && category.childrens.length > 0)}
-            </a>
+            </Link>
 
             {/* Subcategory */}
             {active.category === category.id &&
