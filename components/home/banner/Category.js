@@ -41,7 +41,8 @@ export const Category = () => {
     setActive((prevState) => ({ ...prevState, [level]: null }));
   };
 
-  const renderSubcategories = (category, level, nextLevel) => {
+  // for sub & sub sub & sub sub sub category data
+  const showSubCategory = (category, level, nextLevel) => {
     return (
       <div className="absolute top-0 left-full h-full bg-white border-l border-custom-border w-[230px] text-sm">
         <ul>
@@ -59,11 +60,11 @@ export const Category = () => {
                   )}
                 </a>
 
-                {/* Recursive call to render next level */}
+                {/* show sub sub category */}
                 {active[nextLevel] === subcategory.id &&
                   subcategory.childrens &&
                   subcategory.childrens.length > 0 &&
-                  renderSubcategories(
+                  showSubCategory(
                     subcategory,
                     nextLevel,
                     getNextLevel(nextLevel)
@@ -108,7 +109,7 @@ export const Category = () => {
             {active.category === category.id &&
               category.childrens &&
               category.childrens.length > 0 &&
-              renderSubcategories(category, "category", "subCategory")}
+              showSubCategory(category, "category", "subCategory")}
           </li>
         ))}
       </ul>
