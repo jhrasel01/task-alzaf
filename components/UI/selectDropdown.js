@@ -54,7 +54,7 @@ export const CustomSelect = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={`absolute z-10 bg-white border rounded-md shadow-lg ${className}`}
+            className={`absolute z-20 bg-white border rounded-md shadow-lg ${className}`}
             initial="hidden"
             animate="visible"
             exit="hidden"
