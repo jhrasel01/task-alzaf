@@ -2,7 +2,7 @@ import { GoSearch } from "react-icons/go";
 
 export const Search = () => {
   return (
-    <div className="relative w-full max-w-[680px]">
+    <div className="relative w-full">
       <input
         type="text"
         placeholder="Search Product"

@@ -25,7 +25,7 @@ export default function Header() {
           </div>
 
           {/* search */}
-          <div className="hidden tab:block">
+          <div className="hidden tab:block w-full max-w-[680px]">
             <Search />
           </div>
 
